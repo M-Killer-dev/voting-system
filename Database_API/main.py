@@ -56,6 +56,8 @@ async def authenticate(request: Request):
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Forbidden"
             )
+        else:
+            print("good")
     except:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
